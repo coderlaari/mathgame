@@ -2,36 +2,36 @@ import random
 
 while True:
     try:
-        noppa_luku_minimi = int(input("Anna noppien minimi numero: "))
+        noppa_luku_minimi = int(input("Enter the minimum number for the dice: "))
         break
     except ValueError:
-        print("Virheellinen syöte. Anna kelvollinen numero.")
+        print("Invalid input. Please enter a valid number.")
 
 while True:
     try:
-        noppa_luku_maksimi = int(input("Anna noppien maksimi numero: "))
+        noppa_luku_maksimi = int(input("Enter the maximum number for the dice: "))
         break
     except ValueError:
-        print("Virheellinen syöte. Anna kelvollinen numero.")
+        print("Invalid input. Please enter a valid number.")
 
 # roll 1
 roll1 = random.randint(noppa_luku_minimi, noppa_luku_maksimi)
-print(f"Ensimmäinen noppa näyttää luvun: {roll1}")
+print(f"The first die shows the number: {roll1}")
 
 # roll 2
 roll2 = random.randint(noppa_luku_minimi, noppa_luku_maksimi)
-print(f"Toinen noppa näyttää luvun: {roll2}")
+print(f"The second die shows the number: {roll2}")
 
 # quest_input
 while True:
     try:
-        quest_input = int(input(f"Mikä on {roll1} + {roll2}? "))
+        quest_input = int(input(f"What is {roll1} + {roll2}? "))
         break
     except ValueError:
-        print("Virheellinen syöte. Anna kelvollinen numero.")
+        print("Invalid input. Please enter a valid number.")
 
 if quest_input == (roll1 + roll2):
-    print("Sinun numero on oikein!")
+    print("Your number is correct!")
 else:
-    print(f"Sinun numerosi oli väärin. Oikea vastaus olisi ollut {roll1 + roll2}.")
-# loppu
+    print(f"Your number was incorrect. The correct answer would have been {roll1 + roll2}.")
+# end
