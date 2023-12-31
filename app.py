@@ -1,7 +1,18 @@
 import random
 
-noppa_luku_minimi = int(input("Anna noppien minimi numero: "))
-noppa_luku_maksimi = int(input("Anna noppien maksimi numero: "))
+while True:
+    try:
+        noppa_luku_minimi = int(input("Anna noppien minimi numero: "))
+        break
+    except ValueError:
+        print("Virheellinen syöte. Anna kelvollinen numero.")
+
+while True:
+    try:
+        noppa_luku_maksimi = int(input("Anna noppien maksimi numero: "))
+        break
+    except ValueError:
+        print("Virheellinen syöte. Anna kelvollinen numero.")
 
 # roll 1
 roll1 = random.randint(noppa_luku_minimi, noppa_luku_maksimi)
