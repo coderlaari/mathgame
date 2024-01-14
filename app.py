@@ -2,14 +2,14 @@ import random
 
 while True:
     try:
-        noppa_luku_minimi = int(input("Enter the minimum number for the dice: "))
+        dice_number_minimum = int(input("Enter the minimum number for the dice: "))
         break
     except ValueError:
         print("Invalid input. Please enter a valid number.")
 
 while True:
     try:
-        noppa_luku_maksimi = int(input("Enter the maximum number for the dice: "))
+        dice_number_maximum = int(input("Enter the maximum number for the dice: "))
         break
     except ValueError:
         print("Invalid input. Please enter a valid number.")
